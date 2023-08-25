@@ -45,5 +45,17 @@ const open = () => {
         {{ data.title }}
       </span>
     </div>
+    <div class="mt-2 flex">
+      <div v-if="'price' in data">
+        <span class="text-green-600 font-bold">
+          🌱 {{ data.price }}
+        </span>
+        <span class="text-gray-500 text-xs line-through ml-2">
+          {{ data.oPrice }}
+        </span>
+      </div>
+
+      <span v-else>🌱 免费</span>
+    </div>
   </NCard>
 </template>
